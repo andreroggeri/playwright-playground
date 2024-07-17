@@ -1,0 +1,29 @@
+{
+  "name": "playwright-playground",
+  "version": "0.0.0",
+  "description": "Sample project for exploring Playwright.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:local": "playwright test --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andreroggeri/playwright-playground.git"
+  },
+  "keywords": [
+    "playwright",
+    "test",
+    "e2e"
+  ],
+  "author": "André Roggeri Campos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreroggeri/playwright-playground/issues"
+  },
+  "homepage": "https://github.com/andreroggeri/playwright-playground#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.45.2",
+    "@types/node": "^20.14.11"
+  }
+}
