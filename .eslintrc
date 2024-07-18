@@ -7,7 +7,7 @@
     "mocha": true,
     "es2021": true,
   },
-  "extends": ["airbnb-base", "prettier", "plugin:playwright/playwright-test"],
+  "extends": ["airbnb-typescript/base", "plugin:playwright/playwright-test", "plugin:prettier/recommended"],
   "settings": {
     "import/resolver": {
       "typescript": {
@@ -17,7 +17,10 @@
     },
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier", "playwright"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+  },
+  "plugins": ["@typescript-eslint", "playwright", "import"],
   "rules": {
     "import/prefer-default-export": "off",
     "import/extensions": [
@@ -34,5 +37,8 @@
     ],
     "prettier/prettier": "error",
     "camelcase": "off",
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/quotes": "off",
   },
 }

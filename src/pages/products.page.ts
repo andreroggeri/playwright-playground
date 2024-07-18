@@ -12,7 +12,10 @@ export class ProductsPage {
   header = this.page.locator(".product_label");
   productsContainer = this.page.locator(".inventory_item");
 
-  constructor(private page: Page, public headerComponent: HeaderComponent) {}
+  constructor(
+    private page: Page,
+    public headerComponent: HeaderComponent,
+  ) {}
 
   async addItemToCart(itemName: string): Promise<ItemDetails> {
     const itemNameLocator = this.page.getByText(itemName);
