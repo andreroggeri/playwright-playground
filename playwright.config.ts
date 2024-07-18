@@ -9,7 +9,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 0,
   workers: process.env.PW_WORKER_COUNT ? parseInt(process.env.PW_WORKER_COUNT, 10) : undefined,
-  reporter: process.env.CI ? "github" : "list",
+  reporter: process.env.CI ? [["github"], ["blob"]] : [["list"], ["html"]],
   use: {
     baseURL: "https://www.saucedemo.com/v1/",
     trace: "on",
