@@ -39,11 +39,7 @@ test("Checkout flow", async ({ loginPage, productsPage, cartPage, checkoutPage, 
   await test.step("should fill contact information", async () => {
     await cartPage.checkoutButton.click();
 
-    await checkoutPage.fillInformation({
-      firstName: "John",
-      lastName: "Doe",
-      zipCode: "12345",
-    });
+    await checkoutPage.fillInformation({ firstName: "John", lastName: "Doe", zipCode: "12345" });
   });
 
   await test.step("should view the order summary and total", async () => {
@@ -66,7 +62,7 @@ test("Checkout flow", async ({ loginPage, productsPage, cartPage, checkoutPage, 
 
     await expect(completionPage.header).toHaveText("THANK YOU FOR YOUR ORDER");
     await expect(completionPage.subHeader).toHaveText(
-      "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+      "Your order has been dispatched, and will arrive just as fast as the pony can get there!",
     );
   });
 });
