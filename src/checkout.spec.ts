@@ -33,7 +33,7 @@ test("Checkout flow", async ({ loginPage, productsPage, cartPage, checkoutPage, 
     await expect(cartPage.cartItemsContainer.nth(0)).toContainText(backpack.description);
     await expect(cartPage.cartItemsContainer.nth(1)).toContainText(onesie.name);
     await expect(cartPage.cartItemsContainer.nth(1)).toContainText(onesie.price.replace("$", ""));
-    expect(cartPage.cartItemsContainer.nth(1)).toContainText(onesie.description);
+    await expect(cartPage.cartItemsContainer.nth(1)).toContainText(onesie.description);
   });
 
   await test.step("should fill contact information", async () => {

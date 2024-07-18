@@ -10,7 +10,7 @@ Sample project for exploring Playwright. Currently it has:
 - Dockerized execution.
 - Basic tests for a sample application.
 - Reporting and [traces](https://playwright.dev/docs/trace-viewer#introduction).
-- ESLint and Prettier for code style enforcement.
+- ESLint and Prettier for code style enforcement with git hooks.
 
 ## Setup
 
@@ -44,6 +44,10 @@ npm run test:docker
 
 Tests are also executed on every push and pull request in the Github Actions. The results are available in the `Actions` tab.
 
+## Code style
+
+This project uses ESLint and Prettier to enforce code style. The rules are defined in the `.eslintrc` and `.prettierrc` files. The code is automatically verified before committing using a git hook.
+
 ## Reporting
 
 After running the tests, a report will be generated in the `./playwright-report` directory. Run the following command to open the report and preview the traces:
@@ -55,4 +59,3 @@ npx playwright show-report
 The reports are also generated when executing the tests in the GitHub Actions. They are available in the `Artifacts` tab after the execution is finished. They can also be viewed using the same command above.
 
 When a test fails, it's possible to see all the steps executed and network requests through the trace. The trace is a powerful tool for debugging and understanding what happened during the test execution.
-

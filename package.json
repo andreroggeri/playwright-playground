@@ -7,7 +7,8 @@
     "test": "playwright test",
     "test:local": "playwright test --headed",
     "test:docker": "docker build -t playwright-playground . && docker run playwright-playground",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint \"src/**/*.ts\"",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "eslint-plugin-playwright": "^1.6.2",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.8.0",
+    "husky": "^9.1.1",
     "typescript-eslint": "^7.16.1"
   }
 }
