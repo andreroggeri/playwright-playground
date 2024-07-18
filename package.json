@@ -6,6 +6,7 @@
   "scripts": {
     "test": "playwright test",
     "test:local": "playwright test --headed",
+    "test:docker": "docker build -t playwright-playground . && docker run playwright-playground",
     "lint": "eslint src/**/*.ts"
   },
   "repository": {
